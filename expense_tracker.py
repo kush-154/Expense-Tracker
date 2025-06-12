@@ -236,6 +236,7 @@ class MainWindow(QWidget):
             amount = float(amount)
         except ValueError:
             QMessageBox.warning(self, "Input Error", "Amount must be a number")
+            return
 
         with open(CSV_FILE, "a", newline="") as file:
             writer = csv.writer(file)
